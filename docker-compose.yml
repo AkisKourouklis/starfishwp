@@ -15,7 +15,7 @@ services:
       MYSQL_USER: "${USER}"
       MYSQL_PASSWORD: "${PASSWORD}"
     volumes:
-      - db_data:/var/lib/mysql
+      - starfish_data:/var/lib/mysql
   wordpress:
     depends_on:
       - db
@@ -64,7 +64,7 @@ services:
     networks:
       - starfish
 volumes:
-  db_data:
+  starfish_data:
 networks:
   starfish:
     driver: bridge
