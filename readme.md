@@ -29,3 +29,24 @@
 
 ## Install capistrano
 - `sudo gem install capistrano`
+
+## Install node
+- `curl -sL https://deb.nodesource.com/setup_16.x | sudo -E bash -`
+- `sudo apt install nodejs`
+- `node --version`
+- `npm --version`
+
+## Install yarn
+- `npm install --global yarn`
+- `yarn --version`
+
+## Install docker on windows
+- `Download docker from https://www.docker.com/products/docker-desktop/`
+- `Open docker desktop -> Settings -> Resources -> WSL Intergration -> Check Enable integration with my default WSL distro`
+
+## For windows user install WSL2
+
+
+# Product setup
+- `cd [project_directory]`
+- ''
