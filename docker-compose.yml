@@ -1,4 +1,4 @@
-version: '3.9'
+version: '3.3'
 
 services:
   db:
@@ -15,11 +15,11 @@ services:
       MYSQL_USER: "${USER}"
       MYSQL_PASSWORD: "${PASSWORD}"
     volumes:
-      - starfish_data:/var/lib/mysql
+      - db_data:/var/lib/mysql
   wordpress:
     depends_on:
       - db
-    image: wordpress:5.9.3-fpm
+    image: wordpress:5.9.3-php8.0-fpm
     container_name: "${PROJECT_NAME}-wp"
     restart: always
     links:
@@ -64,7 +64,7 @@ services:
     networks:
       - starfish
 volumes:
-  starfish_data:
+  db_data:
 networks:
   starfish:
     driver: bridge
